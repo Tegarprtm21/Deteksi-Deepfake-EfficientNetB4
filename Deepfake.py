@@ -11,10 +11,10 @@ from tensorflow.keras.applications.efficientnet import preprocess_input
 # Konfigurasi halaman
 st.set_page_config(page_title="Deteksi Deepfake", page_icon="🧠", layout="centered")
 
-# Fungsi untuk mengunduh model dari Google Drive jika belum ada
+# Fungsi untuk mengunduh model dari Google Drive
 @st.cache_resource
 def load_model():
-    file_id = '1jgfFQrm0HkjDbGOpU6rb_7rEfZ1xzVZC'  # Ganti dengan ID kamu
+    file_id = '1jgfFQrm0HkjDbGOpU6rb_7rEfZ1xzVZC'  
     model_path = 'EfficientNetB4.h5'
 
     if not os.path.exists(model_path):
